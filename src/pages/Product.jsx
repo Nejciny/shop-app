@@ -66,18 +66,24 @@ function Product() {
     "https://images.pexels.com/photos/15579683/pexels-photo-15579683.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
   ]
 
+  let itm_key = useSelector((state) => state.counter.cart_key );
+
   function cart(itm_id){
 
     const itm = count.filter(product=> product.id == itm_id );
 
+
+
     // ADD QUANTITY TO OBJECT
 
-    const newitm = ({...itm[0], itm_quantity: quantity})
+    const newitm = ({...itm[0], itm_quantity: quantity, key: itm_key})
+
     store.dispatch(add_to_cart(newitm));
     
     const popup = document.getElementById("popup_container")
     popup.style.display = "unset";
 
+    console.log(newitm);
       
   }
 
@@ -133,8 +139,7 @@ function Product() {
                 </div>
               </div>
 
-              <div className="add_failed popup_container">
-                 Product is already in your cart!</div>
+              <div className="add_failed popup_container"> Product is already in your cart!</div>
       
             </div>
 

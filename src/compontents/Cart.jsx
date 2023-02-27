@@ -3,7 +3,7 @@ import "../CSS/Cart.css"
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 
 import { useDispatch, useSelector } from 'react-redux';
-import { add_to_cart, remove_from_cart } from '../redux/database';
+import { add_to_cart, remove_from_cart,} from '../redux/database';
 import store from '../redux/store';
 
 function Cart() {
@@ -37,7 +37,7 @@ function Cart() {
                         <div className="price"> {item.itm_quantity} x {item.price}€</div>
                     </div>
                     
-                    <div className='delete' onClick={()=>store.dispatch(remove_from_cart(item.id))}>
+                    <div className='delete' onClick={()=>store.dispatch(remove_from_cart(item.key))}>
                         <DeleteOutlinedIcon />
                     </div>
                 </div>

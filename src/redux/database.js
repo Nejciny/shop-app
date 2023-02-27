@@ -18,6 +18,7 @@ const databaseSlice = createSlice({
     gender: "men",
     price: 100,
     cart: [],
+    cart_key: 1,
   },
   reducers: {
     populate: (state, action) => {
@@ -38,15 +39,21 @@ const databaseSlice = createSlice({
     add_to_cart: (state, action) => {
       state.cart =  [...state.cart,action.payload];
 
+      state.cart_key = state.cart_key + 1;
+
+
     },
     remove_from_cart: (state, action) => {
-      state.cart = state.cart.filter(obj => obj.id !== action.payload);
+      state.cart = state.cart.filter(obj => obj.key !== action.payload);
+
+
     },
+
     
 
   }
 })
 
-export const { populate, sort_items, product_category, filter_price, selected_gender, add_to_cart, remove_from_cart } = databaseSlice.actions
+export const { populate, sort_items, product_category, filter_price, selected_gender, add_to_cart, remove_from_cart, new_cart_key } = databaseSlice.actions
 
 export default databaseSlice.reducer;

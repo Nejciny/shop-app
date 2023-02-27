@@ -38,6 +38,8 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    max-width: 600px;
 }
 
 .product  .right .price{
@@ -138,6 +140,19 @@ hr {
         display: flex;
         flex-direction: column-reverse;
         gap: 20px;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .product .right {
+        max-width: 300px;
+        align-self: center;
+        display: unset;
+    }
+
+    .product .mainImg {
+        max-width: 300px;
+        align-self: center;
     }
     
     .product .images {
@@ -150,6 +165,10 @@ hr {
         object-fit: contain;
         cursor: pointer;
         margin-bottom: 10px;
+    }
+
+    .product button {
+        margin: 10px 0px;
     }
 
 
