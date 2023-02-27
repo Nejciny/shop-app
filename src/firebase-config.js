@@ -3,13 +3,13 @@ import {getFirestore} from "@firebase/firestore";
 
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_APIKEY,
-  authDomain: process.env.REACT_APP_AUTHDOMAIN,
-  projectId: process.env.REACT_APP_PROJECTID,
-  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID ,
-  appId: process.env.REACT_APP_APPID,
-  measurementId: process.env.REACT_APP_MEASUREMENTID 
+  apiKey: "AIzaSyDN6JBcJFAn9lJB95OIJ21ef4t1pgxfiFo",
+  authDomain: "store-b59d1.firebaseapp.com",
+  projectId: "store-b59d1",
+  storageBucket: "store-b59d1.appspot.com",
+  messagingSenderId:  "676126030396" ,
+  appId: "1:676126030396:web:f179ac5772050c36bd6139",
+  measurementId: "G-29HRNRFFRW"
 };
 
 
