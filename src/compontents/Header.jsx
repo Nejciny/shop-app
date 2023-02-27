@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import Cart from './Cart';
@@ -20,8 +20,16 @@ function Header() {
 
   const num_of_itms = items_in_cart.length;
 
-  const [open, setOpen] = useState(false);
+    // get the div element you want to close
+  const cart = document.getElementById('cart');
 
+  function open_cart(){
+    let cart = document.getElementById('cart');
+
+    cart.style.display = "block";
+    cart.classList.add("active");
+
+  }
 
 
   return (
@@ -52,7 +60,7 @@ function Header() {
         <div className="icons">
 
 
-          <div className="cartIcon icon" onClick={()=>setOpen(!open)}>
+          <div className="cartIcon icon" onClick={()=>open_cart()} >
             <ShoppingCartOutlinedIcon/>
             <span >{num_of_itms}</span>
 
@@ -61,7 +69,7 @@ function Header() {
 
       </div>
 
-      {open && <Cart/>}
+      <Cart/>
 
 
     </nav>

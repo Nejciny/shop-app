@@ -81,6 +81,29 @@ function App() {
     }
 
   },[]);
+
+
+  useEffect(()=>{
+
+    // get the div element you want to close
+    const cart = document.getElementById('cart');
+
+    const bodyClick = function(event) {
+      // check if the clicked element is NOT inside the div
+      if (!cart.contains(event.target)) {
+        // if it's not, hide the div
+        // cart.style.display = 'none';
+        cart.classList.remove("active");
+      }
+    };
+    // add a click event listener to the document
+    document.addEventListener('click', bodyClick, true );
+
+    return () => {
+      document.removeEventListener("click", bodyClick, true);
+    }
+
+  },[]);
   
 
 
