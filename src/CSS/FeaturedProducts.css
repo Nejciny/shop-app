@@ -1,0 +1,25 @@
+.featuredProducts{
+    margin: 100px 50px;
+
+    
+}
+
+.featuredProducts h1 {
+    text-align: center;
+    font-size: 30px;
+
+    margin-bottom: 50px;
+}
+  
+.products {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+    margin-bottom: 50px;
+
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    justify-content: center;
+    
+}
+

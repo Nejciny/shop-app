@@ -1,0 +1,22 @@
+
+.carousel-slider{
+    max-height: 600px;
+}
+
+.carousel.carousel-slider .control-arrow {
+    width: 50px;
+}
+
+.carousel .control-arrow:before {
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}
+
+.carousel .thumbs {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel .thumb {
+    cursor: pointer;
+}
