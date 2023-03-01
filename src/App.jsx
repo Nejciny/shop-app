@@ -87,14 +87,17 @@ function App() {
 
     // get the div element you want to close
     const cart = document.getElementById('cart');
+    const cartIcon = document.getElementById('cartIcon');
 
-    const bodyClick = function(event) {
+    const bodyClick = function(event)   {
       // check if the clicked element is NOT inside the div
-      if (!cart.contains(event.target)) {
+      if (!cart.contains(event.target) && !cartIcon.contains(event.target)) {
         // if it's not, hide the div
         // cart.style.display = 'none';
         cart.classList.remove("active");
       }
+
+
     };
     // add a click event listener to the document
     document.addEventListener('click', bodyClick, true );

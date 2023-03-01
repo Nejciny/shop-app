@@ -27,7 +27,8 @@ function Header() {
     let cart = document.getElementById('cart');
 
     cart.style.display = "block";
-    cart.classList.add("active");
+    cart.classList.toggle("active");
+
 
   }
 
@@ -60,7 +61,7 @@ function Header() {
         <div className="icons">
 
 
-          <div className="cartIcon icon" onClick={()=>open_cart()} >
+          <div className="cartIcon icon" id='cartIcon' onClick={()=>open_cart()} >
             <ShoppingCartOutlinedIcon/>
             <span >{num_of_itms}</span>
 
