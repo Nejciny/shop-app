@@ -12,7 +12,9 @@ const firebaseConfig = {
   measurementId: "G-29HRNRFFRW"
 };
 
-
+console.log("secret: ")
+console.log( ${{ secrets.SECRET_TOKEN }});
+console.log("_-------------------_")
 
 
 // Initialize Firebase
